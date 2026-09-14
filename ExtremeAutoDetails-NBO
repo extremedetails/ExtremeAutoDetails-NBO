@@ -1,0 +1,377 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extreme Details | Mobile Auto Detailing</title>
+    <!-- Font Awesome for Social Media & Contact Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0066cc;
+            --dark: #111827;
+            --light: #f9fafb;
+            --gray: #4b5563;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-img {
+            height: 55px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo-text span {
+            color: var(--primary);
+        }
+
+        .header-contacts {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .phone-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .phone-link:hover {
+            color: var(--primary);
+        }
+
+        .cta-btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .cta-btn:hover {
+            background: #0052a3;
+            transform: translateY(-1px);
+        }
+
+        .hero {
+            padding: 6rem 5%;
+            text-align: center;
+            background: linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #d1d5db;
+        }
+
+        .offer-banner {
+            background: #e0f2fe;
+            border: 2px dashed var(--primary);
+            color: #0369a1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 2rem auto -1rem auto;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .offer-banner i {
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+
+        .services {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .card ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .card ul li {
+            margin-bottom: 0.5rem;
+            color: var(--gray);
+        }
+
+        .booking {
+            background: white;
+            padding: 4rem 5%;
+            max-width: 600px;
+            margin: 2rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .booking h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group input[type="file"] {
+            background: #f3f4f6;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 3rem 5%;
+            margin-top: 4rem;
+        }
+
+        .footer-logo {
+            height: 70px;
+            width: auto;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.6rem;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo-container">
+            <img src="logo.png" alt="Extreme Details Logo" class="logo-img" onerror="this.style.display='none';">
+            <div class="logo-text">EXTREME <span>DETAILS</span></div>
+        </a>
+        <div class="header-contacts">
+            <a href="tel:+254737916013" class="phone-link"><i class="fa-solid fa-phone"></i> +254 737 916 013</a>
+            <a href="#booking" class="cta-btn">Book Now</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Showroom Shine Delivered To Your Driveway</h1>
+        <p>Premium mobile car detailing serving the local area.</p>
+        <a href="#booking" class="cta-btn">Schedule Appointment</a>
+    </section>
+
+    <div class="offer-banner">
+        <i class="fa-solid fa-gift"></i> SPECIAL OFFER: Wash your car 5 TIMES , get 1 FREE WASH!
+    </div>
+
+    <section class="services">
+        <h2>Our Detailing Packages</h2>
+        <div class="grid">
+            <div class="card">
+                <div>
+                    <h3>Express Wash</h3>
+                    <ul>
+                        <li>✓ Hand Wash & Towel Dry</li>
+                        <li>✓ Wheel & Tire Cleaning</li>
+                        <li>✓ Interior Vacuum & Wipe Down</li>
+                        <li>✓ Exterior Window Cleaning</li>
+                    </ul>
+                </div>
+                <a href="#booking" class="cta-btn" style="text-align:center;">Select</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>Full Interior & Exterior</h3>
+                    <ul>
+                        <li>✓ Everything in Express Package</li>
+                        <li>✓ Deep Shampoo & Steam Clean</li>
+                        <li>✓ Leather Conditioning</li>
+                        <li>✓ Spray Wax Protection</li>
+                    </ul>
+                </div>
+                <a href="#booking" class="cta-btn" style="text-align:center;">Select</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <h3>Signature Restoration</h3>
+                    <ul>
+                        <li>✓ Full Interior & Exterior Detail</li>
+                        <li>✓ Ceramic Coating</li>
+                        <li>✓ Engine Bay Cleaning</li>
+                    </ul>
+                </div>
+                <a href="#booking" class="cta-btn" style="text-align:center;">Select</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking" id="booking">
+        <h2>Request an Appointment</h2>
+        <form id="bookingForm" onsubmit="sendToWhatsApp(event)">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" id="custName" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="custPhone" required placeholder="+254 737 916 013">
+            </div>
+            <div class="form-group">
+                <label>Vehicle Make/Model</label>
+                <input type="text" id="custVehicle" required placeholder="e.g., Toyota Land Cruiser">
+            </div>
+            <div class="form-group">
+                <label>Package</label>
+                <select id="custPackage" required>
+                    <option value="">Select a Package</option>
+                    <option value="Express Wash">Express Wash</option>
+                    <option value="Full Interior & Exterior">Full Interior & Exterior</option>
+                    <option value="Signature Restoration">Signature Restoration</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Preferred Date</label>
+                <input type="date" id="custDate" required>
+            </div>
+            <button type="submit" class="cta-btn" style="width: 100%; background: #25D366;"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</button>
+        </form>
+    </section>
+
+    <footer>
+        <img src="logo.png" alt="Extreme Details Logo" class="footer-logo" onerror="this.style.display='none';">
+        <div class="social-links">
+            <a href="https://wa.me/254737916013" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <p><i class="fa-solid fa-phone"></i> Call/WhatsApp: +254 737 916 013</p>
+        <p style="margin-top: 0.5rem;">&copy; 2026 Extreme Details Mobile Auto Detailing. We come to you!</p>
+    </footer>
+
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const vehicle = document.getElementById('custVehicle').value;
+            const packageSel = document.getElementById('custPackage').value;
+            const date = document.getElementById('custDate').value;
+
+            const text = `Hello Extreme Details!%0A%0AI would like to request an appointment:%0A- *Name:* ${encodeURIComponent(name)}%0A- *Phone:* ${encodeURIComponent(phone)}%0A- *Vehicle:* ${encodeURIComponent(vehicle)}%0A- *Package:* ${encodeURIComponent(packageSel)}%0A- *Preferred Date:* ${encodeURIComponent(date)}%0A%0A(I will attach photos/videos of my vehicle directly in this chat)`;
+
+            window.open(`https://wa.me/254737916013?text=${text}`, '_blank');
+        }
+    </script>
+
+</body>
+</html>
