@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extreme Auto Details - Nairobi</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="logo">Extreme Auto Details</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About Us</a>
+      <a href="#booking">Book Now</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Premium Auto Detailing in Nairobi</h1>
+    <p>Give your vehicle the professional care, shine, and protection it deserves.</p>
+    <a href="#booking" class="btn">Schedule an Appointment</a>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Detailing Packages</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Express Wash & Wax</h3>
+        <p class="price">KSh 3,500</p>
+        <ul>
+          <li>Exterior hand wash & dry</li>
+          <li>Tire dressing & rim clean</li>
+          <li>Spray wax protection</li>
+        </ul>
+      </div>
+      <div class="card featured">
+        <h3>Interior Deep Clean</h3>
+        <p class="price">KSh 7,500</p>
+        <ul>
+          <li>Full vacuum & steam cleaning</li>
+          <li>Leather conditioning / Fabric shampoo</li>
+          <li>Dashboard & trim restoration</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Full Ceramic Coating</h3>
+        <p class="price">KSh 25,000</p>
+        <ul>
+          <li>Paint correction (2-stage)</li>
+          <li>9H Ceramic coat application</li>
+          <li>3-year gloss & hydrophobic shield</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="booking" class="booking">
+    <h2>Book Service</h2>
+    <form id="booking-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required placeholder="John Doe" />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required placeholder="+254 700 000 000" />
+      </div>
+      <div class="form-group">
+        <label for="service">Select Package</label>
+        <select id="service">
+          <option value="express">Express Wash & Wax</option>
+          <option value="interior">Interior Deep Clean</option>
+          <option value="ceramic">Full Ceramic Coating</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Preferred Date</label>
+        <input type="date" id="date" required />
+      </div>
+      <button type="submit" class="btn btn-submit">Submit Reservation</button>
+    </form>
+    <p id="confirmation-msg" class="hidden">Thank you! We will contact you shortly to confirm your slot.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Extreme Auto Details Nairobi. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
