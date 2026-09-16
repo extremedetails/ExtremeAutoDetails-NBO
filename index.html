@@ -813,36 +813,31 @@
 
     if (bookingForm) {
       bookingForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevents page reload
-
-        // Gather form input values
-        const name = document.getElementById('name').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        const serviceSelect = document.getElementById('service');
-        const service = serviceSelect.options[serviceSelect.selectedIndex].text;
-        const location = document.getElementById('location').value.trim();
-        const date = document.getElementById('date').value;
-
-        // Create formatted message
-        const message = `*New Booking Request - Extreme Auto Details*%0A%0A` +
-                        `*Name:* ${encodeURIComponent(name)}%0A` +
-                        `*Phone:* ${encodeURIComponent(phone)}%0A` +
-                        `*Package:* ${encodeURIComponent(service)}%0A` +
-                        `*Location:* ${encodeURIComponent(location)}%0A` +
-                        `*Preferred Date:* ${encodeURIComponent(date)}`;
+        e.preventDefault();
 
         const phoneNumber = '254737916013';
 
-        // Open WhatsApp link with pre-filled message
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+        try {
+          const name = document.getElementById('name') ? document.getElementById('name').value.trim() : '';
+          const phone = document.getElementById('phone') ? document.getElementById('phone').value.trim() : '';
+          
+          const serviceElem = document.getElementById('service');
+          const service = serviceElem ? serviceElem.value : '';
+          
+          const location = document.getElementById('location') ? document.getElementById('location').value.trim() : '';
+          const date = document.getElementById('date') ? document.getElementById('date').value : '';
 
-        // Show confirmation alert on screen
-        const confirmMsg = document.getElementById('confirmation-msg');
-        if (confirmMsg) {
-          confirmMsg.classList.remove('hidden');
+          const message = `*New Booking Request - Extreme Auto Details*%0A%0A` +
+                          `*Name:* ${encodeURIComponent(name)}%0A` +
+                          `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                          `*Package:* ${encodeURIComponent(service)}%0A` +
+                          `*Location:* ${encodeURIComponent(location)}%0A` +
+                          `*Preferred Date:* ${encodeURIComponent(date)}`;
+
+          window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
+        } catch (err) {
+          window.location.href = `https://wa.me/${phoneNumber}`;
         }
-
-        window.location.href = whatsappUrl;
       });
     }
   });
