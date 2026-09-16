@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Extreme Auto Details - Nairobi</title>
   <link rel="stylesheet" href="./styles.css" />
-  <!-- Font Awesome for icons matching Keshy's UI -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    /* Keshy-style modern theme & reset */
     :root {
       --primary: #11382b;
       --accent: #25d366;
@@ -31,13 +29,14 @@
       background-color: var(--bg-light);
       color: var(--text-main);
       line-height: 1.6;
+      padding-bottom: 60px;
     }
 
     a {
       text-decoration: none;
     }
 
-    /* Header Navigation */
+    /* Header */
     header {
       display: flex;
       justify-content: space-between;
@@ -74,16 +73,32 @@
       border-radius: 20px;
     }
 
-    /* Hero Section */
+    /* Promo Offer Banner */
+    .offer-banner {
+      background: #fef3c7;
+      border-bottom: 2px solid #f59e0b;
+      color: #92400e;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .offer-banner i {
+      color: #d97706;
+      margin-right: 0.5rem;
+    }
+
+    /* Hero */
     .hero {
       text-align: center;
-      padding: 4rem 1rem 3rem;
+      padding: 3rem 1rem 2.5rem;
       max-width: 900px;
       margin: 0 auto;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       color: var(--text-main);
       text-transform: uppercase;
       font-weight: 800;
@@ -138,10 +153,6 @@
       margin-top: 1.5rem;
     }
 
-    .stat-item {
-      text-align: center;
-    }
-
     .stat-item strong {
       display: block;
       font-size: 1.2rem;
@@ -154,9 +165,9 @@
       text-transform: uppercase;
     }
 
-    /* Common Section Styling */
+    /* Sections */
     section {
-      padding: 4rem 5%;
+      padding: 3.5rem 5%;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -169,10 +180,9 @@
       text-transform: uppercase;
     }
 
-    /* Card Grid for Services */
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 2rem;
     }
 
@@ -181,15 +191,20 @@
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
     .card h3 {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       color: var(--primary);
+    }
+
+    .category-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
     }
 
     .feature-list {
@@ -199,9 +214,10 @@
     }
 
     .feature-list li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
       padding-left: 1.2rem;
       position: relative;
+      font-size: 0.95rem;
     }
 
     .feature-list li::before {
@@ -218,9 +234,10 @@
       padding: 0.6rem 1rem;
       border-radius: 6px;
       font-weight: 500;
+      text-align: center;
     }
 
-    /* How It Works Section */
+    /* How It Works */
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -233,7 +250,6 @@
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      position: relative;
     }
 
     .step-number {
@@ -249,42 +265,30 @@
       margin: 0 auto 1rem;
     }
 
-    /* Trusted By / Reviews Section */
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .review-card {
+    /* Client Review Form & Container */
+    .review-container {
       background: var(--card-bg);
-      padding: 1.5rem;
+      padding: 2.5rem;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      max-width: 650px;
+      margin: 0 auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
 
-    .stars {
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-    }
-
-    .review-text {
-      font-style: italic;
+    .star-rating {
+      display: flex;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+      color: #d1d5db;
+      cursor: pointer;
       margin-bottom: 1rem;
-      font-size: 0.95rem;
     }
 
-    .reviewer {
-      font-weight: bold;
-      color: var(--primary);
+    .star-rating .fa-star.active {
+      color: var(--gold);
     }
 
-    .reviewer-location {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    /* Why Us Section */
+    /* Why Us */
     .why-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -305,7 +309,7 @@
       margin-bottom: 1rem;
     }
 
-    /* Booking Form Section */
+    /* Forms */
     .booking-container {
       background: var(--card-bg);
       padding: 2.5rem;
@@ -313,12 +317,6 @@
       max-width: 600px;
       margin: 0 auto;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    }
-
-    .subtitle {
-      text-align: center;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
     }
 
     .form-group {
@@ -331,11 +329,12 @@
       font-weight: 600;
     }
 
-    .form-group input, .form-group select {
+    .form-group input, .form-group select, .form-group textarea {
       width: 100%;
       padding: 0.8rem;
       border: 1px solid #ccc;
       border-radius: 6px;
+      font-size: 0.95rem;
     }
 
     .btn-submit {
@@ -354,7 +353,7 @@
       display: none;
     }
 
-    #confirmation-msg {
+    #confirmation-msg, #review-confirmation-msg {
       margin-top: 1rem;
       padding: 1rem;
       background: #d4edda;
@@ -363,7 +362,6 @@
       text-align: center;
     }
 
-    /* Bottom CTA Section */
     .cta-banner {
       background: var(--primary);
       color: #fff;
@@ -378,11 +376,6 @@
       margin-bottom: 1.5rem;
     }
 
-    .cta-banner .hero-ctas {
-      margin-bottom: 0;
-    }
-
-    /* Footer */
     footer {
       background: #0d281e;
       color: #fff;
@@ -422,7 +415,6 @@
       color: #9ca3af;
     }
 
-    /* Bottom Quick Action Bar */
     .quick-bar {
       position: fixed;
       bottom: 0;
@@ -451,21 +443,18 @@
       color: var(--primary);
     }
 
-    body {
-      padding-bottom: 60px; /* Offset for quick bar */
-    }
-
     @media (min-width: 768px) {
-      .quick-bar {
-        display: none;
-      }
-      body {
-        padding-bottom: 0;
-      }
+      .quick-bar { display: none; }
+      body { padding-bottom: 0; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Special Offer Banner -->
+  <div class="offer-banner">
+    <i class="fa-solid fa-gift"></i> SPECIAL OFFER: Buy 5 Car Washes, Get 1 FREE Wash!
+  </div>
 
   <!-- Header / Navigation -->
   <header>
@@ -473,7 +462,7 @@
     <nav>
       <a href="#services">Services</a>
       <a href="#how-it-works">How It Works</a>
-      <a href="#reviews">Reviews</a>
+      <a href="#reviews">Leave a Review</a>
       <a href="#booking" class="btn-nav">Book Now</a>
     </nav>
   </header>
@@ -481,7 +470,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <h1>Your Time Is Precious. I'll Handle The Rest.</h1>
-    <p>Fast, safe, reliable doorstep detailing support — from wash to full ceramic protection — so you can focus on what matters most.</p>
+    <p>Fast, safe, reliable doorstep detailing support — from maintenance wash to full ceramic protection.</p>
     
     <div class="hero-ctas">
       <a href="https://wa.me/254737916013" class="btn-whatsapp" target="_blank">
@@ -508,41 +497,61 @@
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Detailing Services Section -->
   <section id="services" class="services">
-    <h2>What I Do For You</h2>
+    <h2>Detailing Packages</h2>
     <div class="card-grid">
       
+      <!-- Category 1 -->
       <div class="card">
-        <h3>Express Wash & Wax</h3>
-        <ul class="feature-list">
-          <li>Exterior hand wash & paint dry</li>
-          <li>Tire dressing & rim deep clean</li>
-          <li>Hydrophobic spray wax protection</li>
-          <li>Glass & window clarity wipe</li>
-        </ul>
+        <div>
+          <h3>1. Basic / Express Services</h3>
+          <p class="category-desc">Quick maintenance washes designed to remove light surface dirt without deep paint enhancement.</p>
+          <ul class="feature-list">
+            <li><strong>Express Wash:</strong> Exterior snow foam pretreatment, high-pressure rinse, scratch-free hand wash & microfiber drying.</li>
+            <li><strong>Basic Wheel & Tire Care:</strong> Surface rim spray down & tire dressing application for a finished look.</li>
+            <li><strong>Maintenance Interior Clean:</strong> Rapid vacuuming of floor mats & wiping down major dash/console surfaces.</li>
+          </ul>
+        </div>
         <a href="#booking" class="btn btn-card">Select Package</a>
       </div>
 
+      <!-- Category 2 -->
       <div class="card">
-        <h3>Interior Deep Clean</h3>
-        <ul class="feature-list">
-          <li>Full interior vacuum & steam treatment</li>
-          <li>Leather conditioning / Fabric shampoo</li>
-          <li>Dashboard, trim & door panel restoration</li>
-          <li>Odor elimination & air vent sanitization</li>
-        </ul>
+        <div>
+          <h3>2. Standard / Comprehensive</h3>
+          <p class="category-desc">Thorough cleaning, light decontamination, and protective entry-level treatments.</p>
+          <ul class="feature-list">
+            <li><strong>Rim Deep Clean:</strong> Chemical breakdown to dissolve baked-on brake dust with spoke & lug-nut brush agitation.</li>
+            <li><strong>Interior Deep Clean:</strong> Full cabin vacuum, floor mat shampooing, dash/door panel UV protectant & glass wiping.</li>
+            <li><strong>Spray Sealant / Wax:</strong> Synthetic sealant application for added shine & hydrophobic protection.</li>
+          </ul>
+        </div>
         <a href="#booking" class="btn btn-card">Select Package</a>
       </div>
 
+      <!-- Category 3 -->
       <div class="card">
-        <h3>Full Ceramic Coating</h3>
-        <ul class="feature-list">
-          <li>2-stage precision paint correction</li>
-          <li>9H Ceramic shield coat application</li>
-          <li>Gloss restoration & swirl elimination</li>
-          <li>Multi-year water & UV protection</li>
-        </ul>
+        <div>
+          <h3>3. Advanced Restoration</h3>
+          <p class="category-desc">Precision care designed to fix surface flaws and restore high-value trim or surfaces.</p>
+          <ul class="feature-list">
+            <li><strong>Paint Correction & Polishing:</strong> Clay bar surface treatment & multi-stage polishing to eliminate swirl marks and oxidation.</li>
+            <li><strong>Engine Bay Detailing:</strong> Deep degreasing, safe rinse, high-pressure blow dry & protective rubber/plastic dressing.</li>
+          </ul>
+        </div>
+        <a href="#booking" class="btn btn-card">Select Package</a>
+      </div>
+
+      <!-- Category 4 -->
+      <div class="card">
+        <div>
+          <h3>4. Protection Packages</h3>
+          <p class="category-desc">Heavy-duty protective barriers applied after full restoration.</p>
+          <ul class="feature-list">
+            <li><strong>Ceramic Coating:</strong> Multi-year protective layer offering extreme gloss, UV shield, chemical resistance & hydrophobic water-beading.</li>
+          </ul>
+        </div>
         <a href="#booking" class="btn btn-card">Select Package</a>
       </div>
 
@@ -573,39 +582,46 @@
     </div>
   </section>
 
-  <!-- Trusted By / Reviews Section -->
+  <!-- Client Reviews Form Section -->
   <section id="reviews">
-    <h2>Trusted By Nairobi</h2>
-    <div class="reviews-grid">
+    <h2>Client Reviews</h2>
+    <div class="review-container">
+      <h3>Leave Us Your Feedback</h3>
+      <p class="category-desc">Have we detailed your vehicle recently? Share your experience below!</p>
       
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Saved me time on a busy weekend. The ceramic coating finish turned out flawless right at my driveway!"</p>
-        <p class="reviewer">Jane Muthoni</p>
-        <p class="reviewer-location">Kilimani</p>
-      </div>
+      <form id="review-form">
+        <div class="form-group">
+          <label for="rev-name">Your Name *</label>
+          <input type="text" id="rev-name" required />
+        </div>
 
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Punctual, thorough interior deep clean. They removed years of stains from my seats. Highly recommended!"</p>
-        <p class="reviewer">David Kariuki</p>
-        <p class="reviewer-location">CBD</p>
-      </div>
+        <div class="form-group">
+          <label for="rev-location">Location (Neighborhood/Estate) *</label>
+          <input type="text" id="rev-location" required />
+        </div>
 
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Professional equipment and great attention to detail. My car looks brand new."</p>
-        <p class="reviewer">Sarah Ochieng</p>
-        <p class="reviewer-location">Lavington</p>
-      </div>
+        <div class="form-group">
+          <label>Your Rating *</label>
+          <div class="star-rating" id="star-rating">
+            <i class="fa-solid fa-star active" data-value="1"></i>
+            <i class="fa-solid fa-star active" data-value="2"></i>
+            <i class="fa-solid fa-star active" data-value="3"></i>
+            <i class="fa-solid fa-star active" data-value="4"></i>
+            <i class="fa-solid fa-star active" data-value="5"></i>
+          </div>
+        </div>
 
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="review-text">"Best doorstep auto detailing service in Nairobi. Super reliable and easy to book."</p>
-        <p class="reviewer">Michael Wanjiru</p>
-        <p class="reviewer-location">Westlands</p>
-      </div>
+        <div class="form-group">
+          <label for="rev-text">Your Review *</label>
+          <textarea id="rev-text" rows="4" required></textarea>
+        </div>
 
+        <button type="submit" class="btn-submit">Submit Review</button>
+      </form>
+
+      <div id="review-confirmation-msg" class="hidden">
+        Thank you for your feedback! Your review has been submitted.
+      </div>
     </div>
   </section>
 
@@ -613,7 +629,6 @@
   <section id="why-us">
     <h2>Why Choose Us?</h2>
     <div class="why-grid">
-      
       <div class="why-card">
         <i class="fa-solid fa-shield-halved"></i>
         <h3>Reliable & Safe</h3>
@@ -637,39 +652,39 @@
         <h3>Efficient</h3>
         <p>High-end results delivered quickly at your location.</p>
       </div>
-
     </div>
   </section>
 
-  <!-- Booking Form Section -->
+  <!-- Booking Form Section (Clean Input Space) -->
   <section id="booking" class="booking">
     <div class="booking-container">
       <h2>Book Doorstep Service</h2>
-      <p class="subtitle">Fill out the details below and we will confirm your reservation.</p>
 
       <form id="booking-form">
         <div class="form-group">
           <label for="name">Full Name *</label>
-          <input type="text" id="name" required placeholder="e.g. Jane Muthoni" />
+          <input type="text" id="name" required />
         </div>
 
         <div class="form-group">
           <label for="phone">Phone Number *</label>
-          <input type="tel" id="phone" required placeholder="e.g. 07XX XXX XXX" />
+          <input type="tel" id="phone" required />
         </div>
 
         <div class="form-group">
           <label for="service">Select Package *</label>
-          <select id="service">
-            <option value="express">Express Wash & Wax</option>
-            <option value="interior">Interior Deep Clean</option>
-            <option value="ceramic">Full Ceramic Coating</option>
+          <select id="service" required>
+            <option value="" disabled selected>Select detailing package...</option>
+            <option value="basic">1. Basic / Express Services</option>
+            <option value="standard">2. Standard / Comprehensive Detailing</option>
+            <option value="advanced">3. Advanced Restoration & Correction</option>
+            <option value="protection">4. Protection Packages (Ceramic Coating)</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="location">Location *</label>
-          <input type="text" id="location" required placeholder="e.g. Kilimani, Nairobi" />
+          <input type="text" id="location" required />
         </div>
 
         <div class="form-group">
@@ -734,7 +749,7 @@
     </div>
   </footer>
 
-  <!-- Bottom Quick Navigation Bar (Mobile View) -->
+  <!-- Quick Nav (Mobile View) -->
   <div class="quick-bar">
     <a href="#"><i class="fa-solid fa-house"></i>Home</a>
     <a href="#services"><i class="fa-solid fa-list-check"></i>Services</a>
